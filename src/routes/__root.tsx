@@ -1,75 +1,80 @@
-import { HeadContent, Outlet, Scripts, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { TanStackDevtools } from '@tanstack/react-devtools'
+import { TanStackDevtools } from "@tanstack/react-devtools";
+import {
+	createRootRoute,
+	HeadContent,
+	Outlet,
+	Scripts,
+} from "@tanstack/react-router";
+import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { seo } from "@/lib/seo";
 
-import appCss from '../styles.css?url'
+import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
 	head: () => ({
 		meta: [
 			{
-				charSet: 'utf-8',
+				charSet: "utf-8",
 			},
 			{
-				name: 'viewport',
-				content: 'width=device-width, initial-scale=1',
+				name: "viewport",
+				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: 'Supchuck',
-			},
-			{
-				name: 'apple-mobile-web-app-title',
-				content: 'Supchuck'
-			},
-			 ...seo({
 				title: "Supchuck",
-				image: '/og-image.png',
-				description: "The web's leader in superfluous taglines"
+			},
+			{
+				name: "apple-mobile-web-app-title",
+				content: "Supchuck",
+			},
+			...seo({
+				title: "Supchuck",
+				image: "/og-image.png",
+				description: "The web's leader in superfluous taglines",
 			}),
 		],
 		links: [
 			{
-				rel: 'icon',
-				href: '/favicon-96x96.png',
-				sizes: '96x96',
-				type: 'image/png'
+				rel: "icon",
+				href: "/favicon-96x96.png",
+				sizes: "96x96",
+				type: "image/png",
 			},
 			{
-				rel: 'icon',
-				href: '/favicon.svg',
-				type: 'image/svg+xml'
+				rel: "icon",
+				href: "/favicon.svg",
+				type: "image/svg+xml",
 			},
 			{
-				rel: 'apple-touch-icon',
-				href: 'apple-touch-icon.png',
-				sizes: '180x180'
+				rel: "apple-touch-icon",
+				href: "apple-touch-icon.png",
+				sizes: "180x180",
 			},
 			{
-				rel: 'shortcut icon',
-				href: 'favicon.ico'
+				rel: "shortcut icon",
+				href: "favicon.ico",
 			},
 			{
-				rel: 'preconnect',
-				href: 'https://fonts.googleapis.com',
+				rel: "preconnect",
+				href: "https://fonts.googleapis.com",
 			},
 			{
-				rel: 'preconnect',
-				href: 'https://fonts.gstatic.com',
-				crossOrigin: 'anonymous',
+				rel: "preconnect",
+				href: "https://fonts.gstatic.com",
+				crossOrigin: "anonymous",
 			},
 			{
-				rel: 'stylesheet',
-				href: 'https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&family=Comic+Relief:wght@400;700&display=swap',
+				rel: "stylesheet",
+				href: "https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&family=Comic+Relief:wght@400;700&display=swap",
 			},
 			{
-				rel: 'stylesheet',
+				rel: "stylesheet",
 				href: appCss,
 			},
 		],
 	}),
 	shellComponent: RootDocument,
-})
+});
 
 function RootDocument() {
 	return (
@@ -116,11 +121,11 @@ function RootDocument() {
 
 				<TanStackDevtools
 					config={{
-						position: 'bottom-right',
+						position: "bottom-right",
 					}}
 					plugins={[
 						{
-							name: 'Tanstack Router',
+							name: "Tanstack Router",
 							render: <TanStackRouterDevtoolsPanel />,
 						},
 					]}
@@ -128,5 +133,5 @@ function RootDocument() {
 				<Scripts />
 			</body>
 		</html>
-	)
+	);
 }

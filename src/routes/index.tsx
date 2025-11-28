@@ -1,6 +1,6 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute('/')({ component: App })
+export const Route = createFileRoute("/")({ component: App });
 
 function App() {
 	return (
@@ -9,11 +9,7 @@ function App() {
 			<section className="relative">
 				{/* Border container */}
 				<div className="relative">
-					<img
-						src="/images/border.png"
-						alt=""
-						className="w-full"
-					/>
+					<img src="/images/border.png" alt="" className="w-full" />
 					{/* Content inside border - Desktop: text left + image right, Mobile: just image */}
 					<div className="absolute inset-6 p-8 sm:p-12">
 						<div className="grid sm:grid-cols-2 gap-6 h-full sm:pl-3">
@@ -26,7 +22,11 @@ function App() {
 									The Internet is dead. Eulogize it.
 								</h2>
 								<p className="text-sm md:text-base text-black leading-relaxed">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco
+									laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+									irure dolor in reprehenderit in voluptate velit.
 								</p>
 							</div>
 
@@ -44,14 +44,12 @@ function App() {
 					{/* Coming Soon blaze overlay - bottom right */}
 					<div className="absolute -bottom-16 -right-16">
 						<div className="relative max-w-[70vw] sm:max-w-none">
-							<img
-								src="/images/blaze.png"
-								alt=""
-								className="w-100"
-							/>
+							<img src="/images/blaze.png" alt="" className="w-100" />
 							<div className="absolute inset-0 pr-4 pt-6 flex text-center items-center justify-center">
 								<span className="font-['Unkempt'] text-white text-4xl sm:text-5xl font-bold">
-									Coming<br />Soon
+									Coming
+									<br />
+									Soon
 								</span>
 							</div>
 						</div>
@@ -67,7 +65,11 @@ function App() {
 						The Internet is dead. Eulogize it.
 					</h2>
 					<p className="text-black leading-relaxed blur-sm">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						aliquip ex ea commodo consequat. Duis aute irure dolor in
+						reprehenderit in voluptate velit.
 					</p>
 					<img
 						src="/images/rule.png"
@@ -77,5 +79,5 @@ function App() {
 				</div>
 			</section>
 		</div>
-	)
+	);
 }

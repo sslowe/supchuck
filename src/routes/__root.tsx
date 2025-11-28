@@ -82,55 +82,57 @@ function RootDocument() {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="bg-white min-h-screen overflow-x-hidden">
+			<body className="bg-white min-h-screen">
 				{/* Main Layout Container - Narrow, single column */}
-				<div className="max-w-3xl mx-auto px-4">
-					{/* Header with logo and tagline */}
-					<header className="relative mt-6 mb-2">
-						<img
-							src="/images/header.png"
-							alt="Supchuck Header"
-							className="w-full h-[16svh] sm:h-[20svh]"
-						/>
-						{/* Logo overlaid on first third of header */}
-						<img
-							src="/images/logo.png"
-							alt="Supchuck Logo"
-							className="absolute top-4 left-6 h-[65%] sm:h-[75%] w-auto object-contain"
-						/>
-						{/* Tagline in bottom right */}
-						<div className="absolute bottom-3 sm:bottom-4 right-4 sm:right-8 text-right max-w-[60%] sm:max-w-none">
-							<p className="sm:text-lg font-['Unkempt'] text-white">
-								The web's leader in superfluous taglines
+				<div className="overflow-x-hidden">
+					<div className="max-w-3xl mx-auto px-4">
+						{/* Header with logo and tagline */}
+						<header className="relative mt-6 mb-2">
+							<img
+								src="/images/header.png"
+								alt="Supchuck Header"
+								className="w-full h-[16svh] sm:h-[20svh]"
+							/>
+							{/* Logo overlaid on first third of header */}
+							<img
+								src="/images/logo.png"
+								alt="Supchuck Logo"
+								className="absolute top-4 left-6 h-[65%] sm:h-[75%] w-auto object-contain"
+							/>
+							{/* Tagline in bottom right */}
+							<div className="absolute bottom-3 sm:bottom-4 right-4 sm:right-8 text-right max-w-[60%] sm:max-w-none">
+								<p className="sm:text-lg font-['Unkempt'] text-white">
+									The web's leader in superfluous taglines
+								</p>
+							</div>
+						</header>
+
+						{/* Main Content Area */}
+						<main className="mb-4">
+							<Outlet />
+						</main>
+
+						{/* Footer */}
+						<footer className="py-3 text-center">
+							<p className="font-['Unkempt'] text-supchuck-gray">
+								&copy; SUPCHUCK 2025
 							</p>
-						</div>
-					</header>
+						</footer>
+					</div>
 
-					{/* Main Content Area */}
-					<main className="mb-4">
-						<Outlet />
-					</main>
-
-					{/* Footer */}
-					<footer className="py-3 text-center">
-						<p className="font-['Unkempt'] text-supchuck-gray">
-							&copy; SUPCHUCK 2025
-						</p>
-					</footer>
+					<TanStackDevtools
+						config={{
+							position: "bottom-right",
+						}}
+						plugins={[
+							{
+								name: "Tanstack Router",
+								render: <TanStackRouterDevtoolsPanel />,
+							},
+						]}
+					/>
+					<Scripts />
 				</div>
-
-				<TanStackDevtools
-					config={{
-						position: "bottom-right",
-					}}
-					plugins={[
-						{
-							name: "Tanstack Router",
-							render: <TanStackRouterDevtoolsPanel />,
-						},
-					]}
-				/>
-				<Scripts />
 			</body>
 		</html>
 	);

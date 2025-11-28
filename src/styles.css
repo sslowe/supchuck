@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-light-green: #60BA46;
+  --color-dark-orange: #DC5F00;
+  --color-light-orange: #FA9D01;
+  --color-candy-red: #C80109;
+  --color-supchuck-gray: #6B7768;
+
+  --font-family-unkempt: "Unkempt", cursive;
+  --font-family-comic-relief: "Comic Relief", cursive;
+}
+
+body {
+  @apply m-0;
+  font-family: var(--font-family-comic-relief);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Supchuck styling */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

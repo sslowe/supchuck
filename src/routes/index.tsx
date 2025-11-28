@@ -50,7 +50,7 @@ function App() {
 								className="w-100"
 							/>
 							<div className="absolute inset-0 pr-4 pt-6 flex text-center items-center justify-center">
-								<span className="font-[family-name:var(--font-family-unkempt)] text-white text-4xl sm:text-5xl font-bold">
+								<span className="font-['Unkempt'] text-white text-4xl sm:text-5xl font-bold">
 									Coming<br />Soon
 								</span>
 							</div>

@@ -11,6 +11,10 @@
   --font-family-comic-relief: "Comic Relief", cursive;
 }
 
+html, body {
+    overscroll-behavior: none;
+}
+
 body {
   @apply m-0;
   font-family: var(--font-family-comic-relief);

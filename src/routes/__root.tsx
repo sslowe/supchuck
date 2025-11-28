@@ -25,6 +25,7 @@ export const Route = createRootRoute({
 			 ...seo({
 				title: "Supchuck",
 				image: '/og-image.png',
+				description: "The web's leader in superfluous taglines"
 			}),
 		],
 		links: [
@@ -94,7 +95,7 @@ function RootDocument() {
 						/>
 						{/* Tagline in bottom right */}
 						<div className="absolute bottom-3 sm:bottom-4 right-4 sm:right-8 text-right max-w-[60%] sm:max-w-none">
-							<p className="sm:text-lg font-[family-name:var(--font-family-unkempt)] text-white">
+							<p className="sm:text-lg font-['Unkempt'] text-white">
 								The web's leader in superfluous taglines
 							</p>
 						</div>
@@ -107,7 +108,7 @@ function RootDocument() {
 
 					{/* Footer */}
 					<footer className="py-3 text-center">
-						<p className="font-[family-name:var(--font-family-unkempt)] text-supchuck-gray">
+						<p className="font-['Unkempt'] text-supchuck-gray">
 							&copy; SUPCHUCK 2025
 						</p>
 					</footer>
